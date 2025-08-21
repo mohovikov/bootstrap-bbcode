@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-bbcode",
+  "version": "1.0.0",
+  "main": "bootstrap.bbcode.js",
+  "scripts": {
+    "build": "terser bootstrap.bbcode.js -o bootstrap.bbcode.min.js -c -m",
+    "watch": "nodemon --watch bootstrap.bbcode.js --exec \"npm run build\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "terser": "^5.43.1"
+  }
+}
