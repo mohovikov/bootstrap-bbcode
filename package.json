@@ -1,17 +1,29 @@
 {
   "name": "bootstrap-bbcode",
   "version": "1.0.0",
-  "main": "bootstrap.bbcode.js",
+  "main": "dist/bootstrap.bbcode.js",
+  "unpkg": "dist/bootstrap.bbcode.js",
+  "jsdelivr": "dist/bootstrap.bbcode.min.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "build": "terser bootstrap.bbcode.js -o bootstrap.bbcode.min.js -c -m",
-    "watch": "nodemon --watch bootstrap.bbcode.js --exec \"npm run build\""
+    "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohovikov/bootstrap-bbcode.git"
+  },
+  "keywords": [
+    "bbcode",
+    "bootstrap",
+    "parser"
+  ],
+  "author": "MOHOVICK",
+  "license": "MIT",
+  "description": "BBCode parser with Bootstrap components",
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "terser": "^5.43.1"
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack-cli": "^6.0.1"
   }
 }
