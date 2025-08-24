@@ -1,4 +1,6 @@
-function bbcodeToHtml(input) {
+import DOMPurify from 'dompurify'
+
+export function bbcodeToHtml(input) {
   let text = input
 
   const codes = [];
@@ -8,7 +10,6 @@ function bbcodeToHtml(input) {
     return ph
   })
 
-  // Простой BBCode → HTML (из нашей версии под Bootstrap)
   text = text
     .replace(/\[b\]([\s\S]*?)\[\/b\]/gi, "<strong>$1</strong>")
     .replace(/\[i\]([\s\S]*?)\[\/i\]/gi, "<em>$1</em>")
@@ -46,4 +47,6 @@ function bbcodeToHtml(input) {
   })
 }
 
-console.log('%cBootstrap BBCode Parser v1.0 loaded! %chttps://github.com/mohovikov/bootstrap-bbcode/wiki/How-to-use', 'color: green; font-weight: bold;', 'color: blue; text-decoration: underline;');
+console.log('%cBootstrap BBCode Parser v1.0.1 loaded! %chttps://github.com/mohovikov/bootstrap-bbcode/wiki/How-to-use', 'color: green; font-weight: bold;', 'color: blue; text-decoration: underline;');
+
+export default { bbcodeToHtml }
