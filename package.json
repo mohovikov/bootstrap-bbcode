@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-bbcode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/bootstrap.bbcode.js",
   "unpkg": "dist/bootstrap.bbcode.js",
   "jsdelivr": "dist/bootstrap.bbcode.min.js",
@@ -23,7 +23,13 @@
   "license": "MIT",
   "description": "BBCode parser with Bootstrap components",
   "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
     "terser-webpack-plugin": "^5.3.14",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "dompurify": "^3.2.6"
   }
 }

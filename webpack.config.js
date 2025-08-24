@@ -9,6 +9,13 @@ module.exports = {
     library: "bootstrap-bbcode",
     libraryTarget: "umd"
   },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: { loader: "babel-loader" }
+    }]
+  },
   optimization: {
     minimize: true,
     minimizer: [
@@ -26,5 +33,8 @@ module.exports = {
         }
       })
     ]
+  },
+  resolve: {
+    fallback: { "path": false }
   }
 };
